@@ -1,0 +1,101 @@
+name: adroidprojects
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+#-------------------------PACKAGES------------------------
+dependencies:
+  flutter:
+    sdk: flutter
+  #*****UTILITY-PACKAGES*********
+
+  #********ICONS******8
+  iconsax: ^0.0.8
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  #assets here
+
+  assets:
+    - assets/logos/
+    - assets/videos/
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Raleway
+      fonts:
+          - asset: assets/fonts/raleway/Raleway-Regular.ttf
+            weight: 400
+          - asset: assets/fonts/raleway/Raleway-Black.ttf
+            weight: 500
+          - asset: assets/fonts/raleway/Raleway-Bold.ttf
+            weight: 700
+          - asset: assets/fonts/raleway/Raleway-ExtraBold.ttf
+            weight: 800
+          - asset: assets/fonts/raleway/Raleway-ExtraLight.ttf
+            weight: 200
+          - asset: assets/fonts/raleway/Raleway-Light.ttf
+            weight: 300
+          - asset: assets/fonts/raleway/Raleway-Medium.ttf
+            weight: 500
+          - asset: assets/fonts/raleway/Raleway-Thin.ttf
+            weight: 200
+          - asset: assets/fonts/raleway/Raleway-SemiBold.ttf
+            weight: 600
+
+    - family: Poppins
+      fonts:
+          - asset: assets/fonts/poppins/Poppins-Light.otf
+            weight: 300
+          - asset: assets/fonts/poppins/Poppins-ExtraLight.otf
+            weight: 200
+          - asset: assets/fonts/poppins/Poppins-Medium.otf
+            weight: 500
+          - asset: assets/fonts/poppins/Poppins-SemiBold.otf
+            weight: 600
+          - asset: assets/fonts/poppins/Poppins-Bold.otf
+            weight: 700
+          - asset: assets/fonts/poppins/Poppins-Thin.otf
+            weight: 200
+          - asset: assets/fonts/poppins/Poppins-Regular.otf
+            weight: 500
+          - asset: assets/fonts/poppins/Poppins-BoldItalic.otf
+            style: italic
+    - family: Quicksand
+      fonts:
+          - asset: assets/fonts/quicksand/Quicksand-Regular.otf
+            weight: 500
+          - asset: assets/fonts/quicksand/Quicksand-Light.otf
+            weight: 300
+          - asset: assets/fonts/quicksand/Quicksand-LightItalic.otf
+            style: italic
+          - asset: assets/fonts/quicksand/Quicksand-Bold.otf
+            weight: 700
+          - asset: assets/fonts/quicksand/Quicksand_Dash.otf
+            weight: 500
+
+    - family: Caviar-Dreams
+      fonts:
+          - asset: assets/fonts/Caviar-Dreams/CaviarDreams.ttf
+            weight: 500
+          - asset: assets/fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf
+            weight: 700
+          - asset: assets/fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf
+            style: italic
+
+
