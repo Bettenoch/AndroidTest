@@ -12,12 +12,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   #*****UTILITY-PACKAGES*********
+  http: ^1.2.1
+  intl: ^0.19.0
+  logger: ^2.2.0
+  url_launcher: ^6.2.5
 
   #********ICONS******8
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.6
 
+  #stateManagement
+  get_storage: ^2.1.1
+  get: ^4.6.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
