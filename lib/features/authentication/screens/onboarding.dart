@@ -2,7 +2,6 @@ import 'package:adroidprojects/utils/constants/image_strings.dart';
 import 'package:adroidprojects/utils/constants/sizes.dart';
 import 'package:adroidprojects/utils/device/device_utility.dart';
 import 'package:adroidprojects/utils/helpers/helper_functions.dart';
-import 'package:adroidprojects/utils/http/http_client.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
