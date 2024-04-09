@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
+import '../../password_configuration/forgot_password.dart';
 
 class TLoginForm extends StatelessWidget {
   const TLoginForm({
@@ -41,7 +42,7 @@ class TLoginForm extends StatelessWidget {
                     const Text('Remember me'),
                   ],
                 ),
-                TextButton(onPressed: () {}, child: const Text('Forgot Password'))
+                TextButton(onPressed: () => Get.to(() => const ForgetPassword()), child: const Text('Forgot Password'))
               ],
             ),
             const SizedBox(height: TSizes.spaceBetweenSections),
