@@ -2,10 +2,10 @@ import 'package:adroidprojects/features/shop/screens/home/widgets/home_appbar.da
 import 'package:adroidprojects/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:adroidprojects/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
-
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
