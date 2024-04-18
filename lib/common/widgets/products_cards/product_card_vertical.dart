@@ -50,7 +50,7 @@ class TProductVertical extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text(
-                        '25%',
+                        '24%',
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!
