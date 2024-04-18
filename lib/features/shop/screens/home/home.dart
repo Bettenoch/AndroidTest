@@ -1,3 +1,4 @@
+import 'package:adroidprojects/common/widgets/products_cards/product_card_vertical.dart';
 import 'package:adroidprojects/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:adroidprojects/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:adroidprojects/features/shop/screens/home/widgets/promo_slider.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -14,11 +16,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
                 child: Column(
               children: [
                 THomeAppBar(),
@@ -44,30 +46,33 @@ class HomeScreen extends StatelessWidget {
 
                       ///Categories
                       THomeCategories(),
+                    ],
+                  ),
+                )
+              ],
+            )),
 
-                      ],
-                    ),
-                  )
-                ],
-              )
-            ),
             /// Body--Section
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [TImages.promoIcon1, TImages.promoIcon2, TImages.promoIcon3],)
-
-            )
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    const TPromoSlider(
+                      banners: [
+                        TImages.promoIcon1,
+                        TImages.promoIcon2,
+                        TImages.promoIcon3
+                      ],
+                    ),
+                    const SizedBox(height: TSizes.spaceBetweenSections),
+                    TSectionHeading(title: 'Popular Products', onPressed: (){},),
+                    TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductVertical()),
+                  ],
+                ))
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
 
