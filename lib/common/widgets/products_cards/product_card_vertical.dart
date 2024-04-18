@@ -76,7 +76,7 @@ class TProductVertical extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBetweenItems/2),
                   Row(
                     children: [
-                      Text('HP', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
+                      Text('Lenovo', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
                       const SizedBox(width: TSizes.xs),
                       const Icon(Iconsax.verify, color: TColors.primary, size: TSizes.iconXs),
                     ],
