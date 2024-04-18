@@ -29,4 +29,11 @@ class TImages {
   static const String promoIcon2 = "assets/promos/promopic2.png";
   static const String promoIcon3 = "assets/promos/promopic3.png";
   static const String promoIcon4 = "assets/promos/promopic4.png";
+
+  //laptops
+  static const String laptop1 = "assets/laptops/laptop1.png";
+  static const String laptop2 = "assets/laptops/laptop2.png";
+  static const String laptop3 = "assets/laptops/laptop3.png";
+  static const String laptop4 = "assets/laptops/laptop4.png";
+  static const String laptop5 = "assets/laptops/laptop5.png";
 }
