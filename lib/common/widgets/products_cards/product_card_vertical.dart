@@ -10,6 +10,7 @@ import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../styles/shadows.dart';
 import '../icons/t_circular_icon.dart';
+import '../texts/brand_title_text_with_icon.dart';
 import '../texts/product_price_text.dart';
 
 class TProductVertical extends StatelessWidget {
@@ -67,46 +68,45 @@ class TProductVertical extends StatelessWidget {
             ),
 
             const SizedBox( height:  TSizes.spaceBetweenItems/2),
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.md),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.md),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(title: 'Theme.of(context).textTheme', smallSize: true,),
-                  const SizedBox(height: TSizes.spaceBetweenItems/2),
-                  Row(
-                    children: [
-                      Text('Lenovo', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
-                      const SizedBox(width: TSizes.xs),
-                      const Icon(Iconsax.verify, color: TColors.primary, size: TSizes.iconXs),
-                    ],
+                  TProductTitleText(title: 'Theme.of(context).textTheme', smallSize: true,),
+                  SizedBox(height: TSizes.spaceBetweenItems/2),
+                  TBrandTitleWithIcon(
+                    title: 'Lenovo',
                   ),
-
-                  Row(
-                    mainAxisAlignment:  MainAxisAlignment.spaceBetween,
-                    children: [
-                      const TProductPriceText(price: '455'),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          )
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(Iconsax.add, color: TColors.white),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
 
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment:  MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(price: '455'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(TSizes.cardRadiusMd),
+                        bottomRight: Radius.circular(TSizes.productImageRadius),
+                      )
+                  ),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(Iconsax.add, color: TColors.white),
+                    ),
+                  ),
+                )
+              ],
             )
           ],
         ),
@@ -114,6 +114,8 @@ class TProductVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
