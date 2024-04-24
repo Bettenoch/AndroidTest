@@ -69,16 +69,20 @@ class TProductVertical extends StatelessWidget {
 
             const SizedBox( height:  TSizes.spaceBetweenItems/2),
             const Padding(
-              padding: EdgeInsets.only(left: TSizes.md),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TProductTitleText(title: 'Theme.of(context).textTheme', smallSize: true,),
-                  SizedBox(height: TSizes.spaceBetweenItems/2),
-                  TBrandTitleWithIcon(
-                    title: 'Lenovo',
-                  ),
-                ],
+              padding: EdgeInsets.symmetric(horizontal: TSizes.sm),
+
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TProductTitleText(title: 'Brand new Corei 9 500ssd, 450GHZ', smallSize: true,),
+                    SizedBox(height: TSizes.spaceBetweenItems/2),
+                    TBrandTitleWithIcon(
+                      title: 'Lenovo',
+                    ),
+                  ],
+                ),
               ),
 
             ),
