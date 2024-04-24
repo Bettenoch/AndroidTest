@@ -6,11 +6,16 @@ import '../../../utils/helpers/helper_functions.dart';
 
 class TVerticalImageText extends StatelessWidget {
   const TVerticalImageText({
-    super.key, required this.image, required this.title, this.textColor = TColors.white, this.backgroundColor = TColors.white, this.onTap,
+    super.key,
+    required this.image,
+    required this.title,
+    this.textColor = TColors.white,
+    this.backgroundColor,
+    this.onTap,
   });
   final String image, title;
   final Color textColor;
-  final Color ? backgroundColor;
+  final Color? backgroundColor;
   final void Function()? onTap;
 
   @override
@@ -26,26 +31,33 @@ class TVerticalImageText extends StatelessWidget {
               height: 56,
               padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
-                color: backgroundColor ?? (THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white),
+                color: backgroundColor ??
+                    (THelperFunctions.isDarkMode(context)
+                        ? TColors.black
+                        : TColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
                 child: Image(
                     image: AssetImage(image),
                     fit: BoxFit.cover,
-                    color: THelperFunctions.isDarkMode(context) ? TColors.light : TColors.dark),
+                    color: THelperFunctions.isDarkMode(context)
+                        ? TColors.light
+                        : TColors.dark),
               ),
             ),
-            const SizedBox(
-                height: TSizes.spaceBetweenItems),
+            const SizedBox(height: TSizes.spaceBetweenItems),
             SizedBox(
                 width: 55,
-                child: Text(title,
-                  style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor),
+                child: Text(
+                  title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelMedium!
+                      .apply(color: textColor),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                )
-            )
+                ))
           ],
         ),
       ),
