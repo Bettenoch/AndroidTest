@@ -1,5 +1,7 @@
+import 'package:adroidprojects/features/personalization/screens/settings/settings.dart';
 import 'package:adroidprojects/features/shop/screens/home/home.dart';
 import 'package:adroidprojects/features/shop/screens/store/store.dart';
+import 'package:adroidprojects/features/shop/screens/wishlist/wishlist.dart';
 import 'package:adroidprojects/utils/constants/colors.dart';
 import 'package:adroidprojects/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -38,5 +40,5 @@ class NavigationMenu extends StatelessWidget {
 
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [const HomeScreen(), const StoreScreen(), Container(color: Colors.green), Container(color: Colors.purple), ];
+  final screens = [const HomeScreen(), const StoreScreen(), const FavouriteScreen(), const SettingsScreen(), ];
 }
